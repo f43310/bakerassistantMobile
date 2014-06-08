@@ -180,7 +180,7 @@ $(function(){
    			// for(x in percents){
    			// 	console.log("DEBUG percents[x]" + x +"="+ percents[x]);
    			// }
-   			console.log("DEBUG percents.length: " + (percents.length-1));
+   			console.log("DEBUG percents.length: " + (percents.length-1));			// 调试
 
    			if((percents.length-1) > 1){
    				alert("只能有一个百分比 100%");
@@ -190,6 +190,25 @@ $(function(){
    				for (var x in percents){
    					if (percents[x] != 100){
    						alert("您指定的值只能为100");
+   					} else{
+   						// 计算百分比
+   						// 取得100%行号对应的metric值
+   						var baseMetric =  $("input[id='metric"+x+"']").val();
+   							console.log("DEBUG baseMetric: " + baseMetric);			// 调试
+   						// 遍历每一行 
+   						var i=1;
+   						$("tbody tr").each(function(){
+   							console.log("DEBUG x: " + x);			// 调试
+   							console.log("DEBUG i: " + i);			// 调试
+   							if ( i != x ) {
+   								var thisRowMetric = $("input[id='metric"+i+"']").val();
+   									console.log("DEBUG thisRowMetric: " + thisRowMetric);			// 调试
+   								var thisRowPercent = formatNum((thisRowMetric/baseMetric*100),2);
+   									console.log("DEBUG thisRowPercent: " + thisRowPercent);			// 调试
+   								$("input[id='percent"+i+"']").val(thisRowPercent);
+   							}
+   							i++;
+   						});
    					}
    				}
    			}
