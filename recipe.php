@@ -9,7 +9,12 @@
 	class recipe
 	{
 		// 属性
+		private $id;					// 配方id
 		private $name;					// 配方名称
+		private $instructions;			// 制作说明
+		private $temperatureU;			// 上火
+		private $temperatureD;			// 下火
+		private $cooktime;				// 烘烤时间
 
 		// 方法
 		// __get(): 获取属性值
@@ -40,8 +45,8 @@
  		// add : 把配方对象写入数据库
  		function add(){
  			$db = new database;
- 			$sql = "INSERT INTO recipes (name) ";
- 			$sql.= "VALUES ('$this->name')";
+ 			$sql = "INSERT INTO recipes (name,instructions,temperatureU,temperatureD,cooktime) ";
+ 			$sql.= "VALUES ('$this->name','$this->instructions','$this->temperatureU','$this->temperatureD','$this->cooktime')";
  			// var_dump($this->name);			// 调试
  			// echo $this->name."<br />";	    // 调试
  			// echo $sql."<br />";				// 调试
@@ -64,7 +69,12 @@
 
  		// update : 修改配方信息
  		function update(){
-
+ 			$db=new database;
+ 			$sql= "UPDATE recipes SET ";
+ 			$sql.="instructions='$this->instructions',temperatureU=$this->temperatureU,temperatureD=$this->temperatureD,cooktime=$this->cooktime ";
+ 			$sql.="where id =$this->id";
+ 			$db->execute($sql);
+ 			$db=null;
  		}
 
  		// query
@@ -72,11 +82,31 @@
  			if (($condition=="") || ($condition==NULL)) $condition="";
  			else $condition="where ".$condition;
  			$db= new database;
- 			$sql = "SELECT name FROM recipes ".$condition;
+ 			$sql = "SELECT *FROM recipes ".$condition;
  			// echo $sql;								// 调试
  			$arr_recipes=$db->query($sql);
  			return $arr_recipes;
  			$db=NULL;
+ 		}
+
+ 		// queryID
+ 		function queryId(){
+ 			$db=new database;
+ 			$sql= "SELECT id FROM recipes WHERE name='$this->name'";
+ 			// echo $sql;
+ 			$row=$db->executeSFOR($sql);
+ 			return $row->id;
+ 			$db=null;
+ 		}
+
+ 		// queryName
+ 		function queryRI($condition){
+ 			$db=new database;
+ 			$sql="SELECT *FROM recipes WHERE id=$this->id";
+ 			// echo $sql."<br>";
+ 			$row=$db->executeSFOR($sql);
+ 			return $row->$condition;
+ 			$db=null;
  		}
 
  		// generate : 生成子配方
@@ -93,6 +123,7 @@
 		//
 		private $name;					// 原料名称
 		private $recipeName;			// 配方名称
+		private $recipeId;					// 配方id
 		private $metric;				// 用量
 		private $percent;				// 百分比
 		private $sum;					// 原料总量
@@ -118,15 +149,15 @@
  		 // add : 把原料信息写入原料表
  		 function add(){
  			$db = new database;
-		 	$sql = "INSERT INTO ingres(name,recipeName,metric,percent,sum,perSum) ";
-			$sql.= "VALUES ('$this->ingreName','$this->name','$this->metric','$this->percent','$this->sum','$this->perSum')";
+		 	$sql = "INSERT INTO ingres(name,recipeName,recipeId,metric,percent,sum,perSum) ";
+			$sql.= "VALUES ('$this->name','$this->recipeName','$this->recipeId','$this->metric','$this->percent','$this->sum','$this->perSum')";
  			$db->execute($sql);
  			$db=NULL;
  		}
  		function addreq(){
  			$db = new database;
-		 	$sql = "INSERT INTO ingres(name,recipeName,metric,percent,sum,perSum,requireSum) ";
-			$sql.= "VALUES ('$this->ingreName','$this->name','$this->metric','$this->percent',0,'$this->perSum','$this->requireSum')";
+		 	$sql = "INSERT INTO ingres(name,recipeName,recipeId,metric,percent,sum,perSum,requireSum) ";
+			$sql.= "VALUES ('$this->name','$this->recipeName',$this->recipeId,$this->metric,$this->percent,0,$this->perSum,$this->requireSum)";
  			$db->execute($sql);
  			$db=NULL;
  		}
@@ -161,10 +192,21 @@
  			$db=NULL;
  		}
 
- 		 // 查询相关配方的保存的需求产量
- 		static function queryReq($recName){
+ 		 		 		// query condition is recipeId
+ 		function queryRID(){
  			$db= new database;
- 			$sql = "SELECT requireSum FROM ingres where recipeName='".$recName."' and requireSum>0 GROUP BY requireSum";
+ 			$sql = "SELECT *FROM ingres WHERE recipeId=$this->recipeId and sum>0";
+ 			// echo $sql;								// 调试
+ 			// exit;
+ 			$arr_ingres=$db->query($sql);
+ 			return $arr_ingres;
+ 			$db=NULL;
+ 		}
+
+ 		 // 查询相关配方的保存的需求产量
+ 		function queryReq(){
+ 			$db= new database;
+ 			$sql = "SELECT requireSum FROM ingres where recipeId=$this->recipeId and requireSum>0 GROUP BY requireSum";
  			// echo $sql;								// 调试
  			// exit;
  			$arr_ingres=$db->query($sql);
@@ -173,9 +215,9 @@
  		}
 
  		 // query
- 		static function queryReqIngres($req){
+ 		function queryReqIngres($req){
  			$db= new database;
- 			$sql = "SELECT *FROM ingres where requireSum=".$req." and sum =0";
+ 			$sql = "SELECT *FROM ingres where recipeId=$this->recipeId and requireSum=".$req." and sum =0";
  			// echo $sql;								// 调试
  			// exit;
  			$arr_ingres=$db->query($sql);

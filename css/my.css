@@ -1,5 +1,5 @@
 
-@media ( min-width: 40em ) {
+@media ( min-width: 30em ) {
 	/* Show the table header rows and set all cells to display: table-cell */
 	.my-custom-breakpoint td,
 	.my-custom-breakpoint th,
@@ -20,4 +20,13 @@
 .ui-field-contain {
 	margin: 0px;
 	padding: 0px;
+}
+
+/* 提交数据却失提醒 */
+.prompt {
+	color: red;
+}
+/* 显示详情页首标题 */
+.theadth1 {
+	text-align: center;
 }

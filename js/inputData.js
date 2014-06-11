@@ -120,11 +120,13 @@ $(function(){
 	   $("#tab input").textinput("refresh");
 	   // 增加一行就绑定一次事件
 	   $("input[type='number']").on("keyup change", function(){this.value=numberAndPoint(this.value);});
+      // 设置step验证
+      $("input[type='number']").attr("step", "0.01");
 
    });
 
    // 增加require属性
-   $("input").attr('required', true);
+   $("#tab input").attr('required', true);
 
    // 删除控件
    $("#tab input").textinput({clearBtn:true});
@@ -209,16 +211,81 @@ $(function(){
    							}
    							i++;
    						});
+
+                     // 计算metric 和 percent列之和
+                     var sum=0;
+                     var percentSum=0;
+                     var l=1;
+                     $("tbody tr").each(function(){
+                        sum += Number($("input[id='metric"+l+"']").val());
+                        percentSum += Number($("input[id='percent"+l+"']").val());
+                        l++;
+                     });
+
+                     // 表格最后增加一行显示 sum 和 percentSum
+                     $("tbody").append("<tr>"
+                                          +"<td></td>"
+                                          +"<td>总产量= "+formatNum(sum,2)+"<input type='hidden' name='sum' id='sum' value='"+formatNum(sum,2)+"'></td>"
+                                          +"<td>总百分比= "+formatNum(percentSum,2)+"<input type='hidden' name='percentSum' id='percentSum' value='"+formatNum(percentSum,2)+"'></td>"
+                                          +"<td></td>"
+                                          +"</tr>");
+                     $("tbody").trigger("create");
+                     $("#tab").table("rebuild");
+                     $("#add").attr("disabled","disabled");
+
    					}
    				}
    			}
+
+
+
 
    		});
    });
 
 // 增加 onchange事件 判断为数字
 	$(function(){
-		console.log("DEBUG :进入!");
+		console.log("DEBUG :keyup change 事件己绑定!");
 		$("input[type='number']").on("keyup change", function(){this.value=numberAndPoint(this.value);});
 		// $("input[id^='percent']").on("change", function(){this.value=numberAndPoint(this.value);});
 	});
+
+   // 添加 step验证
+   $(function(){
+      $("input[type='number']").attr("step", "0.01");
+   });
+
+   // showDetail.php 生成子配方
+   $(function(){
+      $("#generateRecipe").click(function(){
+         // alert($("input[id='requireSum']").val());
+         if(($("input[id='requireSum']").val()=="") || ($("input[id='requireSum']").val()==undefined)){
+            alert("请先填写需求总量");
+            return false;
+         }else{
+            // 计算新配方
+            var requireSum=$("input[id='requireSum']").val();
+            console.log("DEBUG reqireSum: " + requireSum);       // 调试
+            var percentSum=$("input[id='percentSum']").val();
+            console.log("DEBUG percentSum: " + percentSum);       // 调试
+            var newBaseMetric=formatNum(requireSum/percentSum*100,2);
+            console.log("DEBUG newBaseMetric: " + newBaseMetric);       // 调试
+            var i=1;
+            $("tbody tr").each(function(){
+               if($("input[id='percent"+i+"']").val()==100){
+                  $("input[id='metric"+i+"']").val(newBaseMetric);
+               }else{
+                  var thisPercent=$("input[id='percent"+i+"']").val();
+                  console.log("DEBUG thisPercent: " + thisPercent);       // 调试
+                  var newMetric=formatNum(newBaseMetric*thisPercent/100,2);
+                  console.log("DEBUG newMetric: " + newMetric);       // 调试
+                  $("input[id='metric"+i+"']").val(newMetric);
+               }
+               i++;
+            });
+            $("#generateRecipe").attr("disabled","disabled").button("refresh");
+            $("#saveSonRecipe").attr("disabled",false).button("refresh");
+
+         }
+      });
+   });

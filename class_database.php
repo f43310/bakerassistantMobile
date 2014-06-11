@@ -53,6 +53,12 @@
  			mysql_query($sql);
  		}// execute
 
+ 		 // 查：参数$sql 为 select 语句 结果为单条
+ 		function executeSFOR($sql){
+ 			$oneResult=mysql_query($sql, $this->connection);
+ 			return mysql_fetch_object($oneResult);
+ 		}// execute
+
  		// 查： 参数 $sql 为 insert 语句
  		// 返回值为对象数组，数组中的每一个元素为一行记录构成的对象
  		function query($sql){
