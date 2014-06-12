@@ -94,11 +94,17 @@
 					<input type='hidden' name='recipeName' id='recipeName' value=\"$recipeName\">
 					<input type='hidden' name='recipeId' id='recipeId' value=\"$_REQUEST[id]\">
 					<input type='button' name='generateRecipe' id='generateRecipe' value='生成配方' data-inline='true'>
-					<input type='submit' name='submit' id='saveSonRecipe' value='保存子配方' data-inline='true' disabled=\"disabled\">
-					<input type='submit' name='submit' id='updateRecipe' value='保存修改配方' data-inline='true'>
-					<input type='submit' name='submit' id='updateRecipe' value='查看生成的子配方' data-inline='true'>
 				</li>
-
+				<li class='ui-field-contain'>
+					<input type='submit' name='submit' id='saveSonRecipe' value='保存子配方' data-inline='true' disabled=\"disabled\">
+				</li>
+				<li class='ui-field-contain'>
+					<input type='submit' name='submit' id='updateRecipe' value='保存修改配方' data-inline='true'>
+				</li>
+				<li class='ui-field-contain'>
+					
+					<input type='submit' name='submit' id='showSonRecipes' value='查看生成的子配方' data-inline='true'>
+				</li>
 			  </ul>
 			");
 		print("</form>");
@@ -120,6 +126,7 @@
 			$r->update();
 			$r=null;
 			print("修改成功！");
+			print("<a href='#' data-role='button' data-rel='back'>返回</a>");
 
 		}else if($_REQUEST[submit]=="保存子配方"){
 			
@@ -136,21 +143,32 @@
 				$ingre->__set(perSum,$_REQUEST[percentSum]);
 				$ingre->addreq();
 				$ingre=null;
-				print("保存子配方成功！");
+				
 
 			}
+			print("保存子配方成功！");
+			showSonRecipes();
+
 		}else if ($_REQUEST[submit]=="查看生成的子配方"){
-			print("<h2>$_REQUEST[recipeName]</h2>");
+			showSonRecipes();
+		}else{
+			print("请再点一下返回！");
+		}
+	}
+
+	// 显示子配方列表
+	function showSonRecipes(){
+			print("<h4>$_REQUEST[recipeName]</h4>");
 			print("<ul data-role='listview' data-inset='true'>");
 			$ingre=new ingre;
 			$ingre->__set(recipeId,$_REQUEST[recipeId]);
 			$all_reqs=$ingre->queryReq();
+			$ingre=null;
 			foreach ($all_reqs as $item) {
 				print("<li><a href='index.php?action=showReqDetail&id=".$_REQUEST[recipeId]."&reqSum=".$item->requireSum."'>$item->requireSum</a></li>");
 			}
-					
-		
+	
 			print("</ul>");
-		}
 	}
+
 ?>

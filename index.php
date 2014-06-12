@@ -21,7 +21,11 @@ require("header.php");
 				require_once("showDetail.php");
 				showDetail();
 
-			} else if($action=="saveSonR"){
+			} else if($action=="showSonRecipes"){
+				require_once("showSonRecipes.php");
+				showSonRecipes();
+
+			}else if($action=="saveSonR"){
 				require_once("showDetail.php");
 				saveSonR();
 

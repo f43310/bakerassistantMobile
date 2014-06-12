@@ -18,6 +18,24 @@ function formatNum(str,num){
 	return s;
 }
 
+// 取得数组长度
+function count(o) {                 
+    var t  =  typeof o;                 
+    if (t  ==  'string') {                         
+        return o.length;                 
+    } else 
+    if (t  ==  'object') {                         
+        var n  =  0;                         
+        for (var i  in  o) { 
+         n++;                         
+        }                         
+        return n; 
+
+                        
+    }                 
+    return false;         
+}
+
 // 检查ingre和metric列全部都填上了
 //
 function checkFill(){
@@ -182,13 +200,14 @@ $(function(){
    			// for(x in percents){
    			// 	console.log("DEBUG percents[x]" + x +"="+ percents[x]);
    			// }
-   			console.log("DEBUG percents.length: " + (percents.length-1));			// 调试
+   			console.log("DEBUG count(percents): " + count(percents));			// 调试
+            var arrlen=count(percents);
 
-   			if((percents.length-1) > 1){
+   			if((arrlen) > 1){
    				alert("只能有一个百分比 100%");
-   			} else if((percents.length-1) == 0){
+   			} else if((arrlen) == 0){
    				alert("请指定一个原料做为100%");
-   			} else if((percents.length-1) == 1){
+   			} else if((arrlen) == 1){
    				for (var x in percents){
    					if (percents[x] != 100){
    						alert("您指定的值只能为100");
