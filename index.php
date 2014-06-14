@@ -4,8 +4,10 @@ require("header.php");
 <div data-role="page" id="page1">
 	<div data-role="header"><a href='#' data-role='button' data-rel='back'>返回</a><h1>面包师助手</h1><a href='index.php' data-role='button'>首页</a></div>
 	<div data-role="content">
+
+
 		<?php
-			require_once("showRecipes.php");
+			
 			$action=$_REQUEST['action'];
 			if ($action=="addNew") {
 				require_once("addRecipes.php");
@@ -14,9 +16,6 @@ require("header.php");
 			} else if ($action=="upsert") {
 				require_once("addRecipes.php");
 				addRecipes();
-				showRecipes();
-
-
 			} else if ($action=="showDetail"){
 				require_once("showDetail.php");
 				showDetail();
@@ -34,13 +33,17 @@ require("header.php");
 				showReqDetail();
 
 			}else if ($action=="deleteR") {
-				# code...
-			} else if ($action=="deleteT") {
-				# code...
+				require_once("deleteRecipe.php");
+				deleteR($_REQUEST[id]);
+			} else if ($action=="deleteRR") {
+				require_once("delReqRecipe.php");
+				deleteRR($_REQUEST[id],$_REQUEST[reqsum]);
 			} else{
+				require_once("showRecipes.php");
 				showRecipes();
 			}
 		?>
+		
 	</div>
 	<div data-role="footer">我的烘焙应用</div>
 </div>

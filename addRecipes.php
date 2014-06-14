@@ -76,7 +76,7 @@
 			$r->__set(cooktime,$_REQUEST[cooktime]);
 			$r->add();
 			$r=null;
-			print("配方 $_REQUEST[rName] 增加成功!<br/>");
+			// print("<script>alert('配方: ".$_REQUEST[rName]." 增加成功!');</script>");
 		}
 		// 插入 ingres 表
 		$r=new recipe;
@@ -101,11 +101,11 @@
 			$ingre->__set('perSum',$_REQUEST['percentSum']);
 			$ingre->add();
 			$ingre=NULL;
-			echo "原料: ".$_REQUEST['ingre'.($i+1)]."  用量: ".$_REQUEST['metric'.($i+1)]."  百分比: ".$_REQUEST['percent'.($i+1)]." 添加成功！<br />";
+			// echo "原料: ".$_REQUEST['ingre'.($i+1)]."  用量: ".$_REQUEST['metric'.($i+1)]."  百分比: ".$_REQUEST['percent'.($i+1)]." 添加成功！<br />";
 		}
 
-		echo "总量: ".$_REQUEST['sum']." 百分比: ".$_REQUEST['percentSum']." 添加成功！<br />";
-		// echo "<script>location.href='show_recipes.php';</script>";
+		// echo "总量: ".$_REQUEST['sum']." 百分比: ".$_REQUEST['percentSum']." 添加成功！<br />";
+		echo "<script>alert('配方: ".$_REQUEST[rName]." 增加成功!');location.href='index.php';</script>";
 
 	}
 ?>

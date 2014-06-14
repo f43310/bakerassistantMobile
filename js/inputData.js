@@ -18,6 +18,19 @@ function formatNum(str,num){
 	return s;
 }
 
+// function小数点后一位四舍五入
+//
+function round2(str){
+   var s = parseFloat(str.substr(-1,1));
+   if (s<5){
+      return str.replace(/[1-9]$/,"0");      /// [1-9]$/
+   }else {
+      return str.replace(/[1-9]$/,"5");      //
+   }
+
+}
+
+
 // 取得数组长度
 function count(o) {                 
     var t  =  typeof o;                 
@@ -287,16 +300,16 @@ $(function(){
             console.log("DEBUG reqireSum: " + requireSum);       // 调试
             var percentSum=$("input[id='percentSum']").val();
             console.log("DEBUG percentSum: " + percentSum);       // 调试
-            var newBaseMetric=formatNum(requireSum/percentSum*100,2);
+            var newBaseMetric=formatNum(requireSum/percentSum*100);
             console.log("DEBUG newBaseMetric: " + newBaseMetric);       // 调试
             var i=1;
             $("tbody tr").each(function(){
                if($("input[id='percent"+i+"']").val()==100){
-                  $("input[id='metric"+i+"']").val(newBaseMetric);
+                  $("input[id='metric"+i+"']").val(round2(formatNum(newBaseMetric,1)));      // 设置小数位
                }else{
                   var thisPercent=$("input[id='percent"+i+"']").val();
                   console.log("DEBUG thisPercent: " + thisPercent);       // 调试
-                  var newMetric=formatNum(newBaseMetric*thisPercent/100,2);
+                  var newMetric=round2(formatNum(newBaseMetric*thisPercent/100,1));
                   console.log("DEBUG newMetric: " + newMetric);       // 调试
                   $("input[id='metric"+i+"']").val(newMetric);
                }

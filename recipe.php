@@ -61,7 +61,7 @@
  		function delete(){
  			$db = new database;
  			$sql = "DELETE FROM recipes ";
- 			$sql .= "WHERE name='$this->name'";
+ 			$sql .= "WHERE id=$this->id";
  			// echo $sql;				// 调试
  			$db->execute($sql);
  			$db=NULL;
@@ -166,16 +166,16 @@
  		function delete(){
  			$db = new database;
  			$sql = "DELETE FROM ingres ";
- 			$sql .= "WHERE recipeName='$this->recipeName'";
+ 			$sql .= "WHERE recipeId=$this->recipeId";
  			$db->execute($sql);
  			$db=NULL;
  		}
 
  		//
- 		function deleteR(){
+ 		function deleteRR(){
  			$db = new database;
  			$sql = "DELETE FROM ingres ";
- 			$sql.= "WHERE requireSum=$this->requireSum";
+ 			$sql.= "WHERE recipeId=$this->recipeId and requireSum=$this->requireSum";
  			$db->execute($sql);
  			$db=NULL;
  		}
