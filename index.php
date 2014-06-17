@@ -1,5 +1,5 @@
 <?php
-// session_start();
+session_start();
 require("header.php");
 ?>
 <div data-role="page" id="page1">
@@ -8,11 +8,11 @@ require("header.php");
 
 
 		<?php
-			// 	echo "loginSuccess: ".$_SESSION["loginSuccess"];				// 测试
-			// if(!isset($_SESSION["loginSuccess"])){
-			// 	// echo "loginSuccess: ".$_SESSION["loginSuccess"];				// 测试
-			// 	echo "<script>location='login.php';</script>";
-			// }
+				// echo "loginSuccess: ".$_SESSION["loginSuccess"];				// 测试
+			if(!isset($_SESSION["loginSuccess"])){
+				// echo "loginSuccess: ".$_SESSION["loginSuccess"];				// 测试
+				echo "<script>location='login.php';</script>";
+			}
 			$action=$_REQUEST['action'];
 			if ($action=="addNew") {
 				require_once("addRecipes.php");
@@ -50,7 +50,11 @@ require("header.php");
 		?>
 		
 	</div>
-	<div data-role="footer">我的烘焙应用</div>
+	<div data-role="footer">
+		<div data-role='fieldcontain'>
+			<a href='exit.php' data-role='button' data-ajax='false'>退出</a>
+		</div>
+	</div>
 </div>
 
 <?php require("footer.php"); ?>

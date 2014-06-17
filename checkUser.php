@@ -8,8 +8,8 @@
 		}else{
 			if ($_REQUEST[username]=="bakemaster" && $_REQUEST[password]=="H6bV^V4l"){
 				$_SESSION["loginSuccess"]=1;
-				echo "loginSuccess: ".$_SESSION["loginSuccess"];
-				// echo "<script>location='index.php';</script>";
+				// echo "loginSuccess: ".$_SESSION["loginSuccess"];
+				echo "<script>location='index.php';</script>";
 				return;
 			}else{
 				echo "用户名密码不正确";

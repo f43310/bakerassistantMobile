@@ -12,7 +12,7 @@ require("header.php");
 				</li>
 				<li class='ui-field-contain'>
 					<label for='password'>密  码:</label>
-					<input type='text' name='password' id='password'>
+					<input type='password' name='password' id='password'>
 				</li>
 				<li class='ui-field-contain'>
 					<input type='submit' name='submit' id='submit' value='提  交'>
