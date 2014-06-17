@@ -1,5 +1,5 @@
-
-@media ( min-width: 30em ) {
+﻿
+@media ( min-width: 20em ) {
 	/* Show the table header rows and set all cells to display: table-cell */
 	.my-custom-breakpoint td,
 	.my-custom-breakpoint th,

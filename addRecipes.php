@@ -24,8 +24,11 @@
 		print("</tbody>");
 
 		print("</table><br />");
-		print("	<input type=\"button\" name=\"add\" id=\"add\" value=\"增加一行\" data-inline=\"true\" data-mini=\"true\">
+		print("	<div data-role=\"controlgroup\" data-type=\"horizontal\">
+				<input type=\"button\" name=\"add\" id=\"add\" value=\"增加一行\" data-inline=\"true\" data-mini=\"true\">
 				<input type=\"button\" name=\"calculate\" id=\"calculate\" value=\"计算百分比\" data-mini=\"true\" data-inline=\"true\">
+				<a href=\"#\" data-role=\"button\" onclick=\"clearPercentCol()\" data-mini=\"true\">clearP</a>
+				</div>
 					<ui data-role=\"listview\"  data-inset=\"true\">
 						<li class=\"ui-field-contain\">
 							<label for=\"instruc\">制作步骤:</label>

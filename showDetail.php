@@ -41,6 +41,7 @@
 			   </thead>
 			   <tbody>");
 		$i=1;
+		$rowSum=0;
 		foreach ($all_ingres as $item) {
 				print("
 				<tr>
@@ -50,6 +51,7 @@
 				</tr>
 				");
 				$i++;
+				$rowSum+=1;
 				$sum=$item->sum;
 				$percentSum=$item->perSum;
 		}
@@ -71,9 +73,9 @@
 					<div data-role='controlgroup' data-type='horizontal'>
 						<input type='button' name='generateRecipe' id='generateRecipe' value='计算' data-inline='true'>
 						<input type='submit' name='submit' id='saveSonRecipe' value='保存' data-inline='true' disabled=\"disabled\">
-						
-						
+						<a href='#' data-role='button'>".$rowSum." 行</a>			
 					</div>
+					
 				</li>
 				<li class='ui-field-contain'>
 					<a href='index.php?action=showSonRecipes&id=".$_REQUEST[id]."'>查看生成的子配方</a>

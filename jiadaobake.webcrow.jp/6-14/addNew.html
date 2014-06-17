@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>配方录入</title>
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="js/inputData.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+        //<tr/>居中
+        $("#tab tr").attr("align","center");
+        
+        //增加<tr/>
+        $("#but").click(function(){
+            var _len = $("#tab tr").length;        
+            $("#tab").append("<tr id="+_len+" align='center'>"
+                                +"<td>"+_len+"</td>"
+                                +"<td><input type='text' name='ingre"+_len+"' id='ingre"+_len+"' /></td>"
+                                +"<td><input type='text' name='metric"+_len+"' id='metric"+_len+"' onchange='javascript:this.value=numberAndPoint(this.value);' /></td>"
+                                +"<td><input type='text' name='percent"+_len+"' id='percent"+_len+"' onclick='checkFill()' /><span class='bold'>%</span></td>"
+                                +"<td><a href=\'#\' onclick=\'deltr("+_len+")\'>删除</a></td>"
+                            +"</tr>");
+        })    
+    })
+    
+    //删除<tr/>
+    var deltr =function(index)
+    {
+        var _len = $("#tab tr").length;
+        $("tr[id='"+index+"']").remove();//删除当前行
+        var s=1;
+        for(var i=index+1,j=_len;i<j;i++)
+        {
+            var nextTxtVal1 = $("#ingre"+i).val();
+            var nextTxtVal2 = $("#metric"+i).val();
+            var nextTxtVal3 = $("#percent"+i).val();
+            $("tr[id=\'"+i+"\']")
+                .replaceWith("<tr id="+(i-1)+" align='center'>"
+                                +"<td>"+(i-1)+"</td>"
+                                +"<td><input type='text' name='ingre"+(i-1)+"' value='"+nextTxtVal1+"' id='ingre"+(i-1)+"'/></td>"
+                                +"<td><input type='text' name='metric"+(i-1)+"' value='"+nextTxtVal2+"' id='metric"+(i-1)+"' onchange='javascript:this.value=numberAndPoint(this.value);' /></td>"
+                                +"<td><input type='text' name='percent"+(i-1)+"' value='"+nextTxtVal3+"' id='percent"+(i-1)+"' onclick='checkFill()' /><span class='bold'>%</span></td>"
+                                +"<td><a href=\'#\' onclick=\'deltr("+(i-1)+")\'>删除</a></td>"
+                            +"</tr>");
+        }    
+        
+    }
+</script>
+</head>
+<body>
+<div id="wrap">
+  <div id="container">
+    <h1 align="center">配方录入</h1>
+    <p align='center'><a href="show_recipes.php">浏览配方</a></p>
+    <div id="table">
+      <form action="addNewRecipe.php" method="post">
+        <table width="60%" border="0" align="center" cellpadding="5" cellspacing="1">
+          <tr>
+            <td width="20%" align="right"> 配方名称：&nbsp;&nbsp;</td>
+            <td>&nbsp;
+              <input name="recipeName" type="text" id="recipeName"
+	size="30" maxlength="100" /></td>
+          </tr>
+        </table>
+        <table id="tab" border="0" width="60%" align="center"
+	style="margin-top:10px" cellpadding="5" cellspacing="1">
+          <tr>
+            <td width="20%">序号</td>
+            <td>配料</td>
+            <td>用量(<span class="bold">g</span>)</td>
+            <td>百分比</td>
+            <td>操作</td>
+          </tr>
+        </table>
+        <div
+	style="border:2px; 
+                margin-left:20%;
+                text-align:center;
+                border-top-style:groove;
+                width:60%;
+                padding-top:10px;
+                margin-top:20px">
+          <input type="button" id="but" value="增加" />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <input name="提交" type="submit" id="sub" value="提交" />
+          <div class="clear"></div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+</body>
+</html>

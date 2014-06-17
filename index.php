@@ -1,4 +1,5 @@
 <?php
+// session_start();
 require("header.php");
 ?>
 <div data-role="page" id="page1">
@@ -7,7 +8,11 @@ require("header.php");
 
 
 		<?php
-			
+			// 	echo "loginSuccess: ".$_SESSION["loginSuccess"];				// 测试
+			// if(!isset($_SESSION["loginSuccess"])){
+			// 	// echo "loginSuccess: ".$_SESSION["loginSuccess"];				// 测试
+			// 	echo "<script>location='login.php';</script>";
+			// }
 			$action=$_REQUEST['action'];
 			if ($action=="addNew") {
 				require_once("addRecipes.php");

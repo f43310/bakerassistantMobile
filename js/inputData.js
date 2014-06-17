@@ -76,6 +76,13 @@ function checkFill(){
 	}
 }
 
+// clearPercentCol
+//
+function clearPercentCol(){
+   // alert("href");
+   $("input[id^='percent']").val("");
+}
+
 
 
 // 计算百分比方法
@@ -171,8 +178,10 @@ $(function(){
    //
    var deltr = function(index){
    		var _len = $("tbody tr").length;
+         console.log("DEBUG del - _len: " + _len);       // 调试
    		$("tr[id='"+index+"']").remove();		// 删除当前行
-   		for(var i=index+1,j=_len;i<j;i++){
+         console.log("DEBUG del - index: " + index);       // 调试
+   		for(var i=index,j=_len;i<=j;i++){
    			var nextTxtVal1 = $("#ingre"+i).val();
             var nextTxtVal2 = $("#metric"+i).val();
             var nextTxtVal3 = $("#percent"+i).val();
@@ -183,9 +192,11 @@ $(function(){
 		   	 		+"<td><div data-role='fieldcontain'><input type='number' name='percent"+(i-1)+"' id='percent"+(i-1)+"' value='"+nextTxtVal3+"' data-mini='true'></div></td>"
 		   	 		+"<td><a href='#' data-role='button' data-mini='true' onclick='deltr("+(i-1)+")'>删</a></td>"
             		+"</tr>");
+               console.log("DEBUG del - i: " + i);       // 调试
    		}
    		$("tbody").trigger("create");
    	 	$("#tab").table("rebuild");
+
    }
 
    // 计算烘焙百分比按钮
@@ -200,7 +211,7 @@ $(function(){
    					alert("请填写第 "+i+" 行上的配料和用量!");
    				}
 
-   				if($("input[id='percent"+i+"']").val() != ""){
+   				if(($("input[id='percent"+i+"']").val() != "") && ($("input[id='percent"+i+"']").val() != undefined)){
    					percents[i] = $("input[id='percent"+i+"']").val();
    					console.log("DEBUG - percents: " + percents[i]);
    				}
@@ -320,4 +331,27 @@ $(function(){
 
          }
       });
+   });
+   // 配方详情页增加根据一种配料的量计算其它配料的量
+   $(function(){
+      $("input[id^='metric']").on("change",function(){
+         // alert(this.id);
+         var rowNum=this.id.substr(-1,1);
+         var thisPercent=$("input[id='percent"+rowNum+"']").val();
+         var baseMetric=round2(formatNum(this.value/(thisPercent/100),1));
+         var i=1;
+         $("tbody tr").each(function(){
+            if($("input[id='percent"+i+"']").val()==100){
+               $("input[id='metric"+i+"']").val(baseMetric);
+            }else{
+               if(i!=rowNum){
+                  var thisRowPercent=$("input[id='percent"+i+"']").val();
+                  var thisMetric=round2(formatNum(baseMetric*(thisRowPercent/100),1));
+                  $("input[id='metric"+i+"']").val(thisMetric);
+               }
+            }
+            i++;
+         });
+         
+      })
    });
