@@ -355,3 +355,19 @@ $(function(){
          
       })
    });
+
+   // 登录页面验证
+   $(function(){
+      $("input[type='submit']").on("click",function(){
+         if($("input[id='username']").val()==""){
+            alert("请填写用户名!");
+            $("input[id='username']").focus();
+            return false;
+         }else if($("input[id='password']").val()==""){
+            alert("请填写密码!");
+            $("input[id='password']").focus();
+            return false;
+         }
+         return true;
+      })
+   });

@@ -70,5 +70,14 @@
  			}//while
  			return $result_array;
  		}// query
+
+ 		 		// 查结果集中的行数： 参数 $sql 为 select 语句
+ 		// 返回值为数值，记录结果集的行数
+ 		function queryRows($sql){
+ 			$query_result=mysql_query($sql, $this->connection);	// 查询数据
+ 			$rows=mysql_num_rows($query_result);
+
+ 			return $rows;
+ 		}// query
  	}// class database
 ?>

@@ -24,7 +24,7 @@
 
 /* 提交数据却失提醒 */
 .prompt {
-	color: red;
+	color:#FF0000;
 }
 /* 显示详情页首标题 */
 h1 {
@@ -33,4 +33,6 @@ h1 {
 	font-weight: bold;
 }
 
-.
+h1.red {
+	color:red;
+}

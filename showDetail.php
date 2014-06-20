@@ -116,9 +116,9 @@
 	// saveSonR
 	function saveSonR(){
 	require_once("recipe.php");
-		// print("<pre>");
-		// var_dump($_REQUEST);
-		// print("<pre>");
+		print("<pre>");
+		var_dump($_REQUEST);
+		print("<pre>");
 		if ($_REQUEST[submit]=="更新配方"){
 			$r=new recipe;
 			$r->__set(id,$_REQUEST[recipeId]);
