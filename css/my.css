@@ -23,8 +23,9 @@
 }
 
 /* 提交数据却失提醒 */
-.prompt {
+a.prompt {
 	color:#FF0000;
+	text-align: center;
 }
 /* 显示详情页首标题 */
 h1 {

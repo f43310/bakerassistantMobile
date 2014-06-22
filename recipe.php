@@ -67,6 +67,16 @@
  			$db=NULL;
  		}
 
+ 		// dummyDel : 从数据库删除对象
+ 		function dummyDel(){
+ 			$db = new database;
+ 			$sql = " UPDATE recipes SET";
+ 			$sql .= " deleted=1 WHERE id=$this->id";
+ 			// echo $sql;				// 调试
+ 			$db->execute($sql);
+ 			$db=NULL;
+ 		}
+
  		// update : 修改配方信息
  		function update(){
  			$db=new database;

@@ -1,5 +1,5 @@
 <?php
-
+	session_start();
 	// showDetail()
 	function showDetail(){
 			require_once("recipe.php");
@@ -26,8 +26,12 @@
 		}
 
 		
-
-		print("<a href='index.php?action=deleteR&id=".$_REQUEST[id]."'>删除此配方</a>");
+		if($_SESSION["deleted"]==1){
+			print("<a href='index.php?action=deleteR&id=".$_REQUEST[id]."'>删除此配方</a>");
+		}else{
+			print("<a href='index.php?action=delR&id=".$_REQUEST[id]."'>删除此配方</a>");
+		}
+		
 		print("<table data-role='table' data-mode='reflow' class='ui-body-d table-stripe my-custom-breakpoint'>
 			   <thead>
 					<tr>
@@ -44,10 +48,11 @@
 		$rowSum=0;
 		foreach ($all_ingres as $item) {
 				print("
-				<tr>
+				<tr id='".$i."'>
 					<td class='ui-field-contain'><input type='text' name='ingre".$i."' id='ingre".$i."' value=\"$item->name\"></td>
 					<td class='ui-field-contain'><input type='text' name='metric".$i."' id='metric".$i."'  value=\"$item->metric\"></td>
 					<td class='ui-field-contain'><input type='text' name='percent".$i."' id='percent".$i."'  value=\"$item->percent\"></td>
+					<td><a href=\"#\" data-role=\"button\" data-mini=\"true\" class=\"ui-btn ui-mini\" onclick=\"deltr($i)\">删</a></td>
 				</tr>
 				");
 				$i++;
@@ -70,12 +75,22 @@
 				<li class='ui-field-contain'>
 					<input type='hidden' name='recipeName' id='recipeName' value=\"$recipeName\">
 					<input type='hidden' name='recipeId' id='recipeId' value=\"$_REQUEST[id]\">
+
 					<div data-role='controlgroup' data-type='horizontal'>
 						<input type='button' name='generateRecipe' id='generateRecipe' value='计算' data-inline='true'>
 						<input type='submit' name='submit' id='saveSonRecipe' value='保存' data-inline='true' disabled=\"disabled\">
+						<input type='button' name='calByMetric' id='calByMetric' value='按比例'>
 						<a href='#' data-role='button'>".$rowSum." 行</a>			
 					</div>
+
 					
+				</li>
+				<li class='ui-field-contain'>
+					<div data-role=\"controlgroup\" data-type=\"horizontal\">
+					<input type=\"button\" name=\"add\" id=\"add\" value=\"增加一行\" data-inline=\"true\">
+					<input type=\"button\" name=\"reCalculate\" id=\"reCalculate\" value=\"RECALPER\" data-inline=\"true\">
+					<a href=\"#\" data-role=\"button\" onclick=\"clearPercentCol()\">clearP</a>
+				</div>
 				</li>
 				<li class='ui-field-contain'>
 					<a href='index.php?action=showSonRecipes&id=".$_REQUEST[id]."'>查看生成的子配方</a>

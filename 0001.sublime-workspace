@@ -1,0 +1,876 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"showR",
+				"showRecycleBin"
+			],
+			[
+				"pa",
+				"password_S"
+			],
+			[
+				"user",
+				"username"
+			],
+			[
+				"_",
+				"_SESSION"
+			],
+			[
+				"pass",
+				"password"
+			],
+			[
+				"lo",
+				"loginSuccess"
+			],
+			[
+				"login",
+				"loginSuccess"
+			],
+			[
+				"ro",
+				"rowSum"
+			],
+			[
+				"thisR",
+				"thisRowPercent"
+			],
+			[
+				"per",
+				"percent"
+			],
+			[
+				"sub",
+				"substr"
+			],
+			[
+				"recipe",
+				"recipeId"
+			],
+			[
+				"recip",
+				"recipeId"
+			],
+			[
+				"WHERE",
+				"where"
+			],
+			[
+				"WH",
+				"where"
+			],
+			[
+				"tem",
+				"temperatureD"
+			],
+			[
+				"con",
+				"condition"
+			],
+			[
+				"execu",
+				"executeOneSelect"
+			],
+			[
+				"in",
+				"ingre"
+			],
+			[
+				"ig",
+				"ingre1"
+			],
+			[
+				"te",
+				"temperatureU"
+			],
+			[
+				"nu",
+				"number"
+			],
+			[
+				"lis",
+				"listview"
+			],
+			[
+				"temp",
+				"temperatureU"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"da",
+				"data-mini"
+			],
+			[
+				"this",
+				"thisRowPercent"
+			],
+			[
+				"base",
+				"baseMetric"
+			],
+			[
+				"num",
+				"numberAndPoint"
+			],
+			[
+				"ui",
+				"ui-mini"
+			],
+			[
+				"text",
+				"textinput"
+			],
+			[
+				"a",
+				"attr"
+			],
+			[
+				"nex",
+				"nextTxtVal1"
+			],
+			[
+				"data-",
+				"data-role"
+			],
+			[
+				"li",
+				"link	Tag"
+			],
+			[
+				"fu",
+				"funcion"
+			],
+			[
+				"requ",
+				"require_once"
+			],
+			[
+				"show",
+				"showRecipes"
+			],
+			[
+				"my",
+				"mysql_link"
+			],
+			[
+				"s",
+				"src"
+			],
+			[
+				"exec",
+				"execute"
+			],
+			[
+				"re",
+				"return"
+			],
+			[
+				"ing",
+				"ingre"
+			],
+			[
+				"PHP",
+				"PHP_SELF"
+			],
+			[
+				"loca",
+				"location"
+			],
+			[
+				"sc",
+				"script"
+			],
+			[
+				"rec",
+				"recName"
+			],
+			[
+				"dis",
+				"disSaveButton"
+			],
+			[
+				"req",
+				"reqSum"
+			],
+			[
+				"for",
+				"foreach	foreach …"
+			],
+			[
+				"recp",
+				"recipeName"
+			],
+			[
+				"ge",
+				"generateMetric"
+			],
+			[
+				"url",
+				"urlencode"
+			],
+			[
+				"dat",
+				"database"
+			],
+			[
+				"na",
+				"name"
+			],
+			[
+				"reci",
+				"recipeId"
+			],
+			[
+				"require",
+				"requireSum"
+			],
+			[
+				"conec",
+				"connection"
+			],
+			[
+				"arr",
+				"array"
+			],
+			[
+				"mys",
+				"mysql_close"
+			],
+			[
+				"p",
+				"property_value"
+			],
+			[
+				"property",
+				"property_name"
+			],
+			[
+				"fuc",
+				"function"
+			],
+			[
+				"mysql",
+				"mysql_connect"
+			],
+			[
+				"onc",
+				"onchange"
+			],
+			[
+				"val",
+				"value"
+			],
+			[
+				"sta",
+				"state"
+			],
+			[
+				"do",
+				"document"
+			],
+			[
+				"man",
+				"maneyCNid"
+			],
+			[
+				"fo",
+				"form	Tag"
+			],
+			[
+				"get",
+				"getElementById"
+			],
+			[
+				"su",
+				"successDB"
+			],
+			[
+				"var",
+				"varchar"
+			],
+			[
+				"ph",
+				"phonegap"
+			],
+			[
+				"de",
+				"Device"
+			],
+			[
+				"d",
+				"Device"
+			],
+			[
+				"t",
+				"tBox"
+			],
+			[
+				"is",
+				"isOnline"
+			],
+			[
+				"o",
+				"Over"
+			],
+			[
+				"bu",
+				"buttons"
+			],
+			[
+				"n",
+				"Notification"
+			],
+			[
+				"Net",
+				"network"
+			],
+			[
+				"new",
+				"network"
+			],
+			[
+				"ch",
+				"checkConnection"
+			],
+			[
+				"Ce",
+				"Cell"
+			],
+			[
+				"netw",
+				"networkState"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"u",
+				"utf-8"
+			],
+			[
+				"he",
+				"hello"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "recipe.php",
+			"settings":
+			{
+				"buffer_size": 6831,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "index.php",
+			"settings":
+			{
+				"buffer_size": 1975,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "showRecycleBin.php",
+			"settings":
+			{
+				"buffer_size": 535,
+				"line_ending": "Windows",
+				"name": "<?php"
+			}
+		},
+		{
+			"file": "showDetail.php",
+			"settings":
+			{
+				"buffer_size": 5675,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "deleteRecipe.php",
+			"settings":
+			{
+				"buffer_size": 687,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "showRecipes.php",
+			"settings":
+			{
+				"buffer_size": 461,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"",
+				"Package Control: Install Package"
+			],
+			[
+				"package control:i",
+				"Package Control: Install Package"
+			],
+			[
+				"Pack",
+				"Preferences: Browse Packages"
+			]
+		],
+		"width": 400.0
+	},
+	"console":
+	{
+		"height": 160.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/D/My Documents/bakerassistantMobile/checkUser2.php",
+		"/D/My Documents/bakerassistantMobile/jqueryMobile_tuto/index.php",
+		"/D/My Documents/bakerassistantMobile/checkUser.php",
+		"/D/My Documents/bakerassistantMobile/showReqDetail.php",
+		"/D/My Documents/bakerassistantMobile/addNewRecipe.php",
+		"/D/My Documents/bakerassistant/show_ingres.php",
+		"/D/My Documents/bakerassistant/showReq.php",
+		"/D/My Documents/bakerassistantMobile/jqueryMobile_tuto/header.php",
+		"/D/My Documents/bakerassistantMobile/test/jqm2.html",
+		"/D/My Documents/bakerassistantMobile/test/jqm3.html",
+		"/D/My Documents/bakerassistantMobile/test/page1.html",
+		"/D/My Documents/bakerassistantMobile/test/example1.html",
+		"/D/My Documents/bakerassistantMobile/test/php1.php",
+		"/D/My Documents/bakerassistantMobile/test/page3.html",
+		"/D/My Documents/bakerassistantMobile/addNewRecipes.php",
+		"/D/My Documents/bakerassistantMobile/jqueryMobile_tuto/db.php",
+		"/D/My Documents/bakerassistant/show_recipes.php",
+		"/D/My Documents/bakerassistantMobile/footer.php",
+		"/D/My Documents/bakerassistantMobile/jqueryMobile_tuto/footer.php",
+		"/D/My Documents/bakerassistantMobile/test/page2.html",
+		"/D/My Documents/bakerassistant/recipe.php",
+		"/D/My Documents/bakerassistant/addNewRecipe.php",
+		"/D/My Documents/bakerassistant/js/inputData.js",
+		"/D/My Documents/bakerassistant/class_database.php",
+		"/D/My Documents/bakerassistant/saveReqRec.php",
+		"/C/android/HL_Android/js/main.js",
+		"/D/My Documents/bakerassistant/js/calculation.js",
+		"/D/My Documents/bakerassistant/addNew.html",
+		"/D/My Documents/bakerassistant/show_recipes1.php",
+		"/C/Documents and Settings/Administrator/.ssh/id_rsa.pub",
+		"/C/Documents and Settings/Administrator/桌面/localhost.sql",
+		"/C/Documents and Settings/Administrator/桌面/jiadobakedb.sql",
+		"/D/My Documents/bakerassistant/sys_conf.inc",
+		"/D/My Documents/bakerassistant/1111.php",
+		"/D/My Documents/bakerassistant/1111.html",
+		"/D/My Documents/jiadobake/recipe.php",
+		"/D/My Documents/jiadobake/class_database.php",
+		"/D/My Documents/jiadobake/sys_conf.inc",
+		"/D/My Documents/jiadobake/addNew.html",
+		"/D/My Documents/jiadobake/addNewRecipe.php",
+		"/D/My Documents/jiadobake/dadaBase.php",
+		"/C/Documents and Settings/Administrator/桌面/proxy (1)/jp_proxy",
+		"/C/Documents and Settings/Administrator/桌面/proxy (1)/proxy_2_2.txt",
+		"/C/Documents and Settings/Administrator/桌面/proxy (1)/jp_proxy2.txt"
+	],
+	"find":
+	{
+		"height": 36.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"data-mini=\\\"true\\\"",
+			"i",
+			"baseMetric",
+			"temperatureD",
+			"temperatureU",
+			"name",
+			"i",
+			"++;\n",
+			"sum",
+			"value=\\\"0\\\" ",
+			"temperatureD",
+			"temperatureU",
+			"div",
+			"x",
+			"baseMetric",
+			"numberAndP",
+			"percent1",
+			"metric1",
+			"ingre1",
+			">删<",
+			"删",
+			"\"+(i-1)+\"' ",
+			"(i-1)+\"' ",
+			"_len",
+			"text",
+			">\");\n",
+			"ingre",
+			" data-priority=\\\"5\\",
+			" class=\\\"ui-table-cell-label\\\"",
+			"6",
+			"data-priority=\\\"6\\\"",
+			"4",
+			"metric",
+			"name",
+			"recipes",
+			"Recipes",
+			"ingr",
+			"recipeName",
+			"$this->",
+			"r",
+			"reqSum",
+			"baseIngre",
+			"recipes",
+			"++;\n",
+			"\"",
+			"sql1",
+			"sql",
+			"sql2",
+			"N",
+			"percent",
+			"$i+1",
+			"metric",
+			"VALUE",
+			"DB",
+			"self",
+			"recipeName",
+			"sql",
+			"sql2",
+			"sql1",
+			"id",
+			"sql2",
+			"sql1",
+			"console",
+			"  ",
+			"[ ]$",
+			"[^\\d\\.\\n\\ ]",
+			"[^\\d\\.\\n]",
+			"[^\\d\\.]",
+			"^\\d",
+			"     ",
+			"  ",
+			"     \n",
+			"onforcus",
+			"desc",
+			"IE",
+			"city",
+			"Zip Code",
+			"city",
+			"City",
+			"city",
+			"bind",
+			"“”",
+			")",
+			"city",
+			"ajax",
+			"jQuery.ajax()",
+			"Go to the shop",
+			"XMLHttpRequest",
+			"executeSQL",
+			"		this.createTable=function(){",
+			"is",
+			"  ",
+			"Device",
+			"device",
+			"Device",
+			"device",
+			"Device",
+			"On",
+			"isOnline",
+			"notification",
+			"vibrate",
+			"Vibrate",
+			"vibrate",
+			"Vibrate",
+			"vibrate",
+			"Vibrate",
+			"vibrate",
+			"Vibrate",
+			"vibrate",
+			"Vibrate",
+			"Notification",
+			"reachablitily",
+			"title",
+			" The ",
+			"price",
+			"hardware",
+			"details"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+			"VALUES",
+			":",
+			""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 5,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "recipe.php",
+					"settings":
+					{
+						"buffer_size": 6831,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1651,
+								1651
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1056.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "index.php",
+					"settings":
+					{
+						"buffer_size": 1975,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1713,
+								1713
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 726.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "showRecycleBin.php",
+					"settings":
+					{
+						"buffer_size": 535,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								176,
+								176
+							]
+						],
+						"settings":
+						{
+							"auto_name": "<?php",
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "showDetail.php",
+					"settings":
+					{
+						"buffer_size": 5675,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								737,
+								737
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "deleteRecipe.php",
+					"settings":
+					{
+						"buffer_size": 687,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								390,
+								390
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 66.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "showRecipes.php",
+					"settings":
+					{
+						"buffer_size": 461,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								443,
+								428
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true
+}

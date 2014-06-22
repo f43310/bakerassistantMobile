@@ -19,4 +19,19 @@ function deleteR($recipeId){
 		echo "<script>alert('删除成功！');location.href='index.php'</script>";
 	}
 }
+
+function dummyDelR($recipeId){
+	require_once("recipe.php");
+	if ($recipeId=="") {
+		echo "请选择要删除的配方！<br />";
+	}
+	else{
+		$r=new recipe;
+		$r->__set(id,$recipeId);
+		$r->dummyDel();
+		// echo "配方表删除成功!<br />";
+		$r=null;
+		echo "<script>alert('删除成功！');location.href='index.php'</script>";
+	}
+}
 ?>
