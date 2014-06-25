@@ -4,6 +4,22 @@
 		"selected_items":
 		[
 			[
+				"_",
+				"_REQUEST"
+			],
+			[
+				"recip",
+				"recipeName"
+			],
+			[
+				"reci",
+				"recipeName"
+			],
+			[
+				"recipe",
+				"recipeName"
+			],
+			[
 				"showR",
 				"showRecycleBin"
 			],
@@ -14,10 +30,6 @@
 			[
 				"user",
 				"username"
-			],
-			[
-				"_",
-				"_SESSION"
 			],
 			[
 				"pass",
@@ -46,14 +58,6 @@
 			[
 				"sub",
 				"substr"
-			],
-			[
-				"recipe",
-				"recipeId"
-			],
-			[
-				"recip",
-				"recipeId"
 			],
 			[
 				"WHERE",
@@ -224,10 +228,6 @@
 				"name"
 			],
 			[
-				"reci",
-				"recipeId"
-			],
-			[
 				"require",
 				"requireSum"
 			],
@@ -364,59 +364,26 @@
 	"buffers":
 	[
 		{
-			"file": "recipe.php",
-			"settings":
-			{
-				"buffer_size": 6831,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "index.php",
-			"settings":
-			{
-				"buffer_size": 1966,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "css/my.css",
-			"settings":
-			{
-				"buffer_size": 709,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "showRecycleBin.php",
-			"settings":
-			{
-				"buffer_size": 538,
-				"line_ending": "Windows",
-				"name": "<?php"
-			}
-		},
-		{
 			"file": "showDetail.php",
 			"settings":
 			{
-				"buffer_size": 5675,
+				"buffer_size": 7764,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "deleteRecipe.php",
+			"file": "addRecipes.php",
 			"settings":
 			{
-				"buffer_size": 687,
+				"buffer_size": 4455,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "showRecipes.php",
+			"file": "js/inputData.js",
 			"settings":
 			{
-				"buffer_size": 510,
+				"buffer_size": 13264,
 				"line_ending": "Windows"
 			}
 		}
@@ -457,12 +424,12 @@
 	},
 	"file_history":
 	[
-		"/D/My Documents/bakerassistantMobile/删除功能完善.sublime-project",
+		"/D/My Documents/bakerassistantMobile/addNewRecipes.php",
+		"/D/My Documents/bakerassistantMobile/addNewRecipe.php",
 		"/D/My Documents/bakerassistantMobile/checkUser2.php",
 		"/D/My Documents/bakerassistantMobile/jqueryMobile_tuto/index.php",
 		"/D/My Documents/bakerassistantMobile/checkUser.php",
 		"/D/My Documents/bakerassistantMobile/showReqDetail.php",
-		"/D/My Documents/bakerassistantMobile/addNewRecipe.php",
 		"/D/My Documents/bakerassistant/show_ingres.php",
 		"/D/My Documents/bakerassistant/showReq.php",
 		"/D/My Documents/bakerassistantMobile/jqueryMobile_tuto/header.php",
@@ -472,7 +439,6 @@
 		"/D/My Documents/bakerassistantMobile/test/example1.html",
 		"/D/My Documents/bakerassistantMobile/test/php1.php",
 		"/D/My Documents/bakerassistantMobile/test/page3.html",
-		"/D/My Documents/bakerassistantMobile/addNewRecipes.php",
 		"/D/My Documents/bakerassistantMobile/jqueryMobile_tuto/db.php",
 		"/D/My Documents/bakerassistant/show_recipes.php",
 		"/D/My Documents/bakerassistantMobile/footer.php",
@@ -519,6 +485,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"recipeName",
 			"data-mini=\\\"true\\\"",
 			"i",
 			"baseMetric",
@@ -661,18 +628,18 @@
 			[
 				{
 					"buffer": 0,
-					"file": "recipe.php",
+					"file": "showDetail.php",
 					"settings":
 					{
-						"buffer_size": 6831,
+						"buffer_size": 7764,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1651,
-								1651
+								5915,
+								5902
 							]
 						],
 						"settings":
@@ -681,25 +648,25 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1056.0,
+						"translation.y": 2310.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "index.php",
+					"file": "addRecipes.php",
 					"settings":
 					{
-						"buffer_size": 1966,
+						"buffer_size": 4455,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1693,
-								1693
+								2694,
+								2694
 							]
 						],
 						"settings":
@@ -708,143 +675,35 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 792.0,
+						"translation.y": 616.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "css/my.css",
+					"file": "js/inputData.js",
 					"settings":
 					{
-						"buffer_size": 709,
+						"buffer_size": 13264,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								538,
-								538
+								6385,
+								6385
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 3,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "showRecycleBin.php",
-					"settings":
-					{
-						"buffer_size": 538,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								190,
-								190
-							]
-						],
-						"settings":
-						{
-							"auto_name": "<?php",
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "showDetail.php",
-					"settings":
-					{
-						"buffer_size": 5675,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								737,
-								737
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "deleteRecipe.php",
-					"settings":
-					{
-						"buffer_size": 687,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								390,
-								390
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "showRecipes.php",
-					"settings":
-					{
-						"buffer_size": 510,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								51,
-								51
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 3432.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

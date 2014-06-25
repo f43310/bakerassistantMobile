@@ -91,9 +91,7 @@
 		// return;
 
 		// 下面一行中的9在服务器上是10因为服务器多传了一个数据
-		// echo ADDEXTRANUM;
-		// return;
-		$rowsNum = (count($_REQUEST)-ADDEXTRANUM)/3;			// 通过公式计算要插入数据库原料表中的个数, "4"代表其它和原料无关的元素 "3"代表配方表的三个属性 
+		$rowsNum = (count($_REQUEST)-10)/3;			// 通过公式计算要插入数据库原料表中的个数, "4"代表其它和原料无关的元素 "3"代表配方表的三个属性 
 
 		for ($i =0; $i < $rowsNum; $i++){
 			// echo $_POST['ingre'.($i+1)];

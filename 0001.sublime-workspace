@@ -375,7 +375,7 @@
 			"file": "index.php",
 			"settings":
 			{
-				"buffer_size": 1975,
+				"buffer_size": 1966,
 				"line_ending": "Windows"
 			}
 		},
@@ -383,7 +383,7 @@
 			"file": "showRecycleBin.php",
 			"settings":
 			{
-				"buffer_size": 535,
+				"buffer_size": 538,
 				"line_ending": "Windows",
 				"name": "<?php"
 			}
@@ -408,7 +408,7 @@
 			"file": "showRecipes.php",
 			"settings":
 			{
-				"buffer_size": 461,
+				"buffer_size": 510,
 				"line_ending": "Windows"
 			}
 		}
@@ -682,15 +682,15 @@
 					"file": "index.php",
 					"settings":
 					{
-						"buffer_size": 1975,
+						"buffer_size": 1966,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1713,
-								1713
+								0,
+								0
 							]
 						],
 						"settings":
@@ -709,21 +709,22 @@
 					"file": "showRecycleBin.php",
 					"settings":
 					{
-						"buffer_size": 535,
+						"buffer_size": 538,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								176,
-								176
+								0,
+								0
 							]
 						],
 						"settings":
 						{
 							"auto_name": "<?php",
-							"syntax": "Packages/PHP/PHP.tmLanguage"
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -790,15 +791,15 @@
 					"file": "showRecipes.php",
 					"settings":
 					{
-						"buffer_size": 461,
+						"buffer_size": 510,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								443,
-								428
+								316,
+								316
 							]
 						],
 						"settings":

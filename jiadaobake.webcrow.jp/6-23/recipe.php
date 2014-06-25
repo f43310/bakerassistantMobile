@@ -67,21 +67,11 @@
  			$db=NULL;
  		}
 
- 		// dummyDel : 从数据库删除对象
- 		function switchDel($str){
- 			$db = new database;
- 			$sql = " UPDATE recipes SET ";
- 			$sql .= $str." WHERE id=$this->id";
- 			// echo $sql;				// 调试
- 			$db->execute($sql);
- 			$db=NULL;
- 		}
-
  		// update : 修改配方信息
  		function update(){
  			$db=new database;
  			$sql= "UPDATE recipes SET ";
- 			$sql.="name='$this->name',instructions='$this->instructions',temperatureU=$this->temperatureU,temperatureD=$this->temperatureD,cooktime=$this->cooktime ";
+ 			$sql.="instructions='$this->instructions',temperatureU=$this->temperatureU,temperatureD=$this->temperatureD,cooktime=$this->cooktime ";
  			$sql.="where id =$this->id";
  			$db->execute($sql);
  			$db=null;
