@@ -11,6 +11,7 @@
 		// 属性
 		private $id;					// 配方id
 		private $name;					// 配方名称
+		private $user_id;				// 用户ID
 		private $instructions;			// 制作说明
 		private $temperatureU;			// 上火
 		private $temperatureD;			// 下火
@@ -45,8 +46,8 @@
  		// add : 把配方对象写入数据库
  		function add(){
  			$db = new database;
- 			$sql = "INSERT INTO recipes (name,instructions,temperatureU,temperatureD,cooktime) ";
- 			$sql.= "VALUES ('$this->name','$this->instructions','$this->temperatureU','$this->temperatureD','$this->cooktime')";
+ 			$sql = "INSERT INTO recipes (name,user_id,instructions,temperatureU,temperatureD,cooktime) ";
+ 			$sql.= "VALUES ('$this->name',$this->user_id,'$this->instructions','$this->temperatureU','$this->temperatureD','$this->cooktime')";
  			// var_dump($this->name);			// 调试
  			// echo $this->name."<br />";	    // 调试
  			// echo $sql."<br />";				// 调试

@@ -50,10 +50,14 @@ require_once("environmentVar.php");
 			} else if ($action=="deleteRR") {
 				require_once("delReqRecipe.php");
 				deleteRR($_REQUEST[id],$_REQUEST[reqsum]);
+			} else if($action=="help"){
+				require_once("help.php");
+				showHelp();
+
 			} else if($action=="revert"){
 				require_once("revert.php");
 				revert($_REQUEST["id"]);
-			}else{
+			} else{
 				require_once("showRecipes.php");
 				showRecipes();
 				print("<li>
@@ -66,7 +70,7 @@ require_once("environmentVar.php");
 	<div data-role="footer">
 		<div data-role='controlgroup' data-type='horizontal'>
 			<a href='exit.php' data-role='button' data-ajax='false'>退出</a>
-
+			<a href='index.php?action=help' data-role='button' data-ajax='false'>帮助</a>
 		</div>
 	</div>
 </div>

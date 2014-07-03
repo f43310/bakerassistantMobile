@@ -27,6 +27,7 @@
 
 		
 		if($_SESSION["deleted"]==1){
+			print("<div class='red'>这是垃圾筒内的配方，删除后将无法恢复！</div>");
 			print("<a href='index.php?action=deleteR&id=".$_REQUEST[id]."'>删除此配方</a>");
 		}else{
 			print("<a href='index.php?action=delR&id=".$_REQUEST[id]."'>删除此配方</a>");
@@ -190,6 +191,7 @@
 			else{
 				$r=new recipe;
 				$r->__set(name,$_REQUEST[rName]);
+				$r->__set(user_id,$_SESSION["user_id"]);
 				$r->__set(instructions,$_REQUEST[instruc]);
 				$r->__set(temperatureU,$_REQUEST[temperatureU]);
 				$r->__set(temperatureD,$_REQUEST[temperatureD]);

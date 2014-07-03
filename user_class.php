@@ -52,6 +52,16 @@
  			return $user;
  		}
 
+ 		function queryId(){
+ 			$sql="SELECT user_id FROM user ";
+ 			$sql.="where username='$this->username'";
+ 			$db=new database;
+ 			$user_id=$db->executeSFOR($sql);
+ 			$db=null;
+ 			return $user_id->user_id;
+
+ 		}
+
  		function add(){
  			$sql="INSERT INTO user (username,password)";
  			$sql.=" VALUES('$this->username','$this->password')";

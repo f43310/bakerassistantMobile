@@ -1,10 +1,10 @@
 <?php
-session_start();
+// session_start();
 unset($_SESSION["deleted"]);
 	function showRecipes(){
 		require_once("recipe.php");
 		$r=new recipe;
-		$cond="deleted=0";
+		$cond="deleted=0 and user_id=$_SESSION[user_id]";
 		$all_recipes=$r::query($cond);
 
 		print("<a href=\"index.php?action=addNew\" data-ajax=\"false\">添加配方</a>");

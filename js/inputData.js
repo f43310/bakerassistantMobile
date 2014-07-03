@@ -249,6 +249,8 @@ $(function(){
 	   $("input[type='number']").on("keyup change", function(){this.value=numberAndPoint(this.value);});
       // 设置step验证
       $("input[type='number']").attr("step", "0.01");
+         // 增加require属性
+      $("#tab input").attr('required', true);
 
    });
 

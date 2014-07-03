@@ -18,7 +18,7 @@
 		print("<tr id=\"1\">
 			<td><div data-role=\"fieldcontain\"><input type=\"text\" name=\"ingre1\" id=\"ingre1\" data-mini=\"true\"></div></td>
 			<td><div data-role=\"fieldcontain\"><input type=\"number\" name=\"metric1\" id=\"metric1\" data-mini=\"true\"></div></td>
-			<td><div data-role=\"fieldcontain\"><input type=\"number\" name=\"percent1\" id=\"percent1\" data-mini=\"true\"></div></td>
+			<td><div data-role=\"fieldcontain\"><input type=\"number\" name=\"percent1\" id=\"percent1\" data-mini=\"true\" placeholder=\"此列自动生成请指定一个配料为100然后按计算\"></div></td>
 			<td><a href=\"#\" data-role=\"button\" data-mini=\"true\" class=\"ui-btn ui-state-disabled ui-mini\">删</a></td></tr>");
 
 		print("</tbody>");
@@ -73,6 +73,7 @@
 		else{
 			$r=new recipe;
 			$r->__set(name,$_REQUEST[rName]);
+			$r->__set(user_id,$_SESSION["user_id"]);
 			$r->__set(instructions,$_REQUEST[instruc]);
 			$r->__set(temperatureU,$_REQUEST[temperatureU]);
 			$r->__set(temperatureD,$_REQUEST[temperatureD]);

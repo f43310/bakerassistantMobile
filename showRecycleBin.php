@@ -1,9 +1,9 @@
 <?php
-session_start();
+// session_start();
 function showRecycleBin(){
 		require_once("recipe.php");
 		$r=new recipe;
-		$cond="deleted=1";
+		$cond="deleted=1 and user_id=$_SESSION[user_id]";
 		$all_recipes=$r::query($cond);
 		$_SESSION["deleted"]=1;
 		// echo $_SESSION["deleted"];
